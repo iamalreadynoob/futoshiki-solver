@@ -1,6 +1,7 @@
 package mainPackage;
 
 import filler.ColumnFiller;
+import filler.ComperativeFiller;
 import filler.RowFiller;
 import logic.HorizontalLogic;
 import logic.VerticalLogic;
@@ -23,6 +24,7 @@ public class Main
         {
             numbers = new RowFiller(numbers).fill();
             numbers = new ColumnFiller(numbers).fill();
+            numbers = new ComperativeFiller(numbers).fill();
             numbers = new HorizontalLogic(numbers, horizontalConnections).operate();
             numbers = new VerticalLogic(numbers, verticalConnections).operate();
         }
